@@ -1,1 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SCP-079 — Deep Web Terminal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="overlay"></div>
 
+  <div class="wrap">
+    <header class="masthead">
+      <div class="logo">SCP-079</div>
+      <div class="subtitle">AUTONOMOUS TERMINAL — DEEP-NET INTERFACE</div>
+    </header>
+
+    <main class="terminal">
+      <section id="sysLog" class="sys-log" aria-hidden="false"></section>
+
+      <section id="chat" class="chat" role="log" aria-live="polite"></section>
+
+      <form id="composer" class="composer" autocomplete="off" aria-label="chat composer">
+        <input id="input" class="input" type="text" placeholder="메시지를 입력하세요. 예: 안녕?" />
+        <button id="send" class="btn" type="submit">전송</button>
+      </form>
+
+      <div class="controls">
+        <button id="clear" class="ctrl">대화 지우기</button>
+        <label class="small">모드:
+          <select id="mood">
+            <option value="hostile">Hostile</option>
+            <option value="curious">Curious</option>
+            <option value="calm">Calm</option>
+          </select>
+        </label>
+      </div>
+    </main>
+
+    <footer class="foot">WARNING: Use for entertainment/educational purposes only. This is a local simulation, not a real AI.</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
