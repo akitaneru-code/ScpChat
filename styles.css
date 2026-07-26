@@ -1,0 +1,47 @@
+/* Deep-web / terminal aesthetic */
+:root{
+  --bg1:#050608;
+  --bg2:#0b0f12;
+  --neon:#00ffea;
+  --neon2:#6eff7b;
+  --muted:#9aa2a6;
+  --glass: rgba(255,255,255,0.03);
+  --accent:#00b3ff;
+  --danger:#ff3b3b;
+  font-family: "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(0,40,40,0.08), transparent),
+              linear-gradient(180deg,var(--bg1),var(--bg2));
+  color:var(--neon);
+  overflow:hidden;
+}
+
+/* animated noisy background */
+.overlay{
+  position:fixed; inset:0;
+  background-image:
+    linear-gradient(transparent 50%, rgba(0,0,0,0.08) 50%),
+    linear-gradient(90deg, rgba(0,255,170,0.02), rgba(255,255,255,0.02));
+  background-size: 100% 2px, 400% 400%;
+  mix-blend-mode:screen;
+  pointer-events:none;
+  animation:noise 8s linear infinite;
+  opacity:0.35;
+}
+@keyframes noise{
+  0%{background-position:0 0, 0 0}
+  50%{background-position:0 0, 200% 200%}
+  100%{background-position:0 0, 0 0}
+}
+
+/* page layout */
+.wrap{
+  position:relative;
+  width:min(1000px,96%);
